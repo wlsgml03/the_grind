@@ -1,0 +1,16 @@
+## running sum of 1d array
+class Solution(object):
+    def runningSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        ##making an empty list to store running sum
+        running_sum = []
+        #go through list
+        for i in range(len(nums)):
+            if i == 0:
+                running_sum.append(nums[i])
+            else:
+                running_sum.append(running_sum[i-1] + nums[i])
+        return running_sum
