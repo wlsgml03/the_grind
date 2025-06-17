@@ -1,0 +1,32 @@
+Contains duplicate:
+- Given an array of numbers, return true if any value appears more than once in an array
+Original attempt:
+- Sorting the array, and then seeing if one value of the array equals to the next
+.
+.
+.
+Hash Map/Hash Set:
+- Create a hash set  and then seeing if it appears more than once in an array 
+
+Python:
+present = set()
+for num in nums:
+    if num in present:
+        return true
+    present.add(num)
+return False
+## Returning the number of the number is already in the hash map / hash set 
+
+C++:
+unordered_set<int> present;
+for (int num : nums) {
+    if (present.count(num)) {
+        return true;
+    }
+    present.insert(num);
+}
+return false;
+
+Notes:
+- unordered set can only have unique elements
+- present.count(num): only returns 0 or 1 depending on element is already in a set or not. However, not a boolean. it's an int
