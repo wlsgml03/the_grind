@@ -1,0 +1,10 @@
+the easiest way to do this would be a hashmap. I had done this previously before I took data structures and did it brute force, but that isn't very cool.
+updated solution:
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        previousMap = {} #val : index
+        for i,n in enumerate(nums):
+            difference = target - n
+            if difference in previousMap:
+                return[previousMap[difference], i]
+            previousMap[n] = i #if we don't find, upate the hashmap
