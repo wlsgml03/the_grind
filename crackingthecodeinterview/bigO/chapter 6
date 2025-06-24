@@ -1,0 +1,16 @@
+Big O: language and metric we used to describe efficiency of algorithms
+- Electronic Transfer: O(s), where s is size of the file (time to transfer file increases linearly w/ size of file)
+- Airplane Transfer: O(1) with respect to size of the file, won't take longer to get file to your friend (time is constant)
+0 big O: upper bound on time
+Q (big Omega): conccept for lower bound
+0 (big Theta): tight bound on runtime
+- Best Case, worst case and expected case
+
+Time is not the only thing that matters in an algorithm- we care about the memory or space required by algorithm
+Space Complexity parallel concept to Time complexity: how much space do we need to add to the algorithm?
+- Dropping the constants will lessen space complexity
+- Dropping Non-Dominant Terms in terms of Big O (O N^2 + N) = O(N^2)
+When do you multiply runtimes vs add them?
+- Nested: multiplication
+
+Amortized time: 
