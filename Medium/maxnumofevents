@@ -1,0 +1,14 @@
+events = [[1,2],[2,3],[3,4], [1,2]]
+def max_num_of_events(events):
+    ##sorting events by start time
+    events.sort(key = lambda x: x[0])
+    print(events)
+    count = 0
+    end_time = 0
+    for event in events:
+        if event[0] >= end_time:
+            count += 1
+            end_time = event[1]
+    return count
+
+print(max_num_of_events(events))  # Output: 3
